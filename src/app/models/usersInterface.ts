@@ -3,6 +3,7 @@ export interface UsersInterface {
     name?: string,
     surname?: string,
     identification?: string,
+    document_type?: string,
     gender?: string,
     email?: string,
     password?: string

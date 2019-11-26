@@ -1,1 +1,35 @@
-<p>list-users works!</p>
+<div class="container">
+    <div class="text-center">
+        <h2 class="mb-5">Users Maria Barcelona</h2>
+        <button class="btn btn-dark mb-5">Registrar Usuario</button>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Identification</th>
+          <th>Document</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.surname }}</td>
+          <td>{{ user.identification }}</td>
+          <td>{{ user.document_type }}</td>
+          <td>{{ user.gender }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.password }}</td>
+          <td><button class="btn btn-dark">Editar</button></td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>

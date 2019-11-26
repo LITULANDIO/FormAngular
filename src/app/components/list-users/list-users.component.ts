@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiRestService } from '../../service/api-rest.service';
+import { UsersInterface } from '../../models/usersInterface';
 
 @Component({
   selector: 'app-list-users',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListUsersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiRestService: ApiRestService) { }
+  private users: UsersInterface;
 
   ngOnInit() {
+    this.getListUsers();
+  }
+
+  getListUsers(){
+    this.apiRestService.getUsers()
+    .subscribe((users:UsersInterface) => (this.users = users));
   }
 
 }
