@@ -1,0 +1,29 @@
+.margin-center{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.dni{
+    margin-left: 50px;
+    width: 80%;
+}
+.genero{
+    justify-content: end;
+    margin-left: 85px;
+}
+.content-create{
+    display: flex;
+    justify-content: space-between;
+    .close{
+        position: relative;
+        font-size: 35px;
+        cursor: pointer;
+    }
+}
+.form-control{
+    border-color: black !important;
+    &:focus{
+        box-shadow: none !important
+        }
+}
+

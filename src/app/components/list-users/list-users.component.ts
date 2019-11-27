@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiRestService } from '../../service/api-rest.service';
 import { UsersInterface } from '../../models/usersInterface';
+import { ModalService } from '../_modal';
+
 
 @Component({
   selector: 'app-list-users',
@@ -9,16 +11,24 @@ import { UsersInterface } from '../../models/usersInterface';
 })
 export class ListUsersComponent implements OnInit {
 
-  constructor(private apiRestService: ApiRestService) { }
+  constructor(private apiRestService: ApiRestService, private modalService: ModalService) { }
   private users: UsersInterface;
 
   ngOnInit() {
     this.getListUsers();
-  }
+    }
 
   getListUsers(){
     this.apiRestService.getUsers()
     .subscribe((users:UsersInterface) => (this.users = users));
   }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+}
+
+  closeModal(id: string) {
+    this.modalService.close(id);
+}
 
 }
