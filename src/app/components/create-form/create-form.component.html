@@ -3,43 +3,43 @@
     <h3 class="text-center">Nuevo Usuario - Datos personales</h3>
      <span class="close" aria-hidden="true">&times;</span></div>
 
-    <form>
+    <form class="form-user" #formUser="ngForm" (ngSubmit)="saveUser(formUser)">
         <div class="row margin-center">
         <div class="form-group">
           <label for="name"><small>Name</small></label>
-          <input type="text" class="form-control" id="name" aria-describedby="nameHelp">
+          <input type="text" class="form-control"  name="name" #name="ngModel" [(ngModel)]="user.name">
         </div>
         <div class="form-group">
             <label for="surname"><small>Surname</small></label>
-            <input type="text" class="form-control" id="name" aria-describedby="surnameHelp">
+            <input type="text" class="form-control"  name="surname" #surname="ngModel" [(ngModel)]="user.surname">
           </div>
         </div>
         <div class="row margin-center">
                 <div class="form-group">
                   <label for="document"><small>Documento Identificativo</small></label>
-                  <select class="form-control">
+                  <select class="form-control" name="document_type" #document_type="ngModel" [(ngModel)]="user.document_type">
                         <option>DNI</option>
                         <option>NIE</option>
                       </select>  
                 </div>
                       <div class="form-group">
                     <label for="document"><small></small></label>
-                      <input type="text" class="form-control dni" id="dni" aria-describedby="documentHelp">
+                      <input type="text" class="form-control dni"  name="identification" #identification="ngModel" [(ngModel)]="user.identification">
                       </div>
                 </div>
             <div class="row margin-center genero">
                     <div class="form-group">
                     <label for="document"><small>Género</small></label><br>
                     <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hombre" value="mujer">
+                            <input class="form-check-input" type="radio" name="gender" #gender="ngModel" value="mujer" [(ngModel)]="user.gender">
                             <label class="form-check-label" for="mujer">Mujer</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mujer" value="hombre">
+                            <input class="form-check-input" type="radio" name="gender"  #gender="ngModel" value="hombre" [(ngModel)]="user.gender">
                             <label class="form-check-label" for="hombre">Hombre</label>
                           </div>
                           <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="nada" value="nada">
+                            <input class="form-check-input" type="radio" name="gender" #gender="ngModel" value="nada" [(ngModel)]="user.gender">
                             <label class="form-check-label" for="nada">Prefiero no contestar</label>
                           </div>
                     </div>
@@ -47,11 +47,11 @@
             <div class="row margin-center mb-3">
                     <div class="form-group">
                       <label for="email"><small>Email</small></label>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                      <input type="email" class="form-control"  name="email" #email="ngModel" [(ngModel)]="user.email">
                     </div>
                     <div class="form-group">
                         <label for="password"><small>Password</small></label>
-                        <input type="password" class="form-control" id="password" aria-describedby="passwordHelp">
+                        <input type="password" class="form-control"  name="password" #password="ngModel"  [(ngModel)]="user.password">
                       </div>
                     </div>
    <div class="text-center">
@@ -59,5 +59,6 @@
 
    </div>
       </form>
+
       
 </jw-modal>

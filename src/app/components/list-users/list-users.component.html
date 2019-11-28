@@ -29,10 +29,10 @@
           <td>{{ user.gender }}</td>
           <td>{{ user.email }}</td>
           <td>{{ user.password }}</td>
-          <td><button class="btn btn-dark">Editar</button></td>
-
-
+          <td><button class="btn btn-dark" (click)="openModal('custom-modal-2')">Editar</button></td>
         </tr>
       </tbody>
     </table>
   </div>
+
+ <pre>{{ users | json }}</pre>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiRestService } from '../../service/api-rest.service';
 import { UsersInterface } from '../../models/usersInterface';
+
 import { ModalService } from '../_modal';
 
 
@@ -16,8 +17,10 @@ export class ListUsersComponent implements OnInit {
 
   ngOnInit() {
     this.getListUsers();
+    
     }
 
+  //mostrar todos los usuarios 
   getListUsers(){
     this.apiRestService.getUsers()
     .subscribe((users:UsersInterface) => (this.users = users));
@@ -30,5 +33,7 @@ export class ListUsersComponent implements OnInit {
   closeModal(id: string) {
     this.modalService.close(id);
 }
+
+
 
 }
