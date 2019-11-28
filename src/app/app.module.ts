@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from './components/_modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 //Routes
 import { AppRoutingModule } from './app-routing.module';
@@ -32,7 +34,9 @@ import { ApiRestService } from './service/api-rest.service';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    ModalModule
+    ModalModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [ApiRestService],
   bootstrap: [AppComponent]
