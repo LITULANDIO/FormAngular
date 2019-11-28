@@ -1,27 +1,48 @@
-# Testing
+# Primera parte
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+- Maquetar un formulario lo más idéntico posible al que se adjunta en este correo teniendo en
+cuenta los detalles del mismo.
+# Segunda parte
 
-## Development server
+- Realizar un pequeño proyecto en Angular / React que contenga el formulario de la primera parte y
+lleve a cabo las siguientes acciones :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Crear usuario** : En un caso de que el formulario no contenga datos, al hacer click en "Modificar tus
+datos" realizar una petición POST al servidor donde la respuesta sea una respuesta correcta con
+los datos que se han introducido en el formulario.
 
-## Code scaffolding
+**Obtener usuario** : Realizar una petición GET al servidor pasando un id (Por ahora solo existe el id
+1) y mostrar los datos en el formulario como corresponden.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Editar usuario** : Modificar los datos que se obtienen del servidor y al hacer click en "Modificar tus
+datos", realizar una petición PUT con los datos y el servidor devuelva una respuesta correcta con
+los datos modificados.
 
-## Build
+**Servidor** : https://my-json-server.typicode.com/volkz/technical-form/users
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+**Endpoints** :
+- GET /users
+- GET /users/:id
+- POST /users
+- PUT /users/:id
 
-## Running unit tests
+# Iniciar Proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Instalar dependencias
 
-## Running end-to-end tests
+```
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
 
-## Further help
+- Compilar app
+```
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Abrir el navegador
+```
+http://localhost:4200/
+```
+
+
